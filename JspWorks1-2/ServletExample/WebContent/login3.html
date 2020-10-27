@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+<script type="text/javascript">
+	function fn_validate(){
+		var frmLogin = document.frmLogin;
+		var id = frmLogin.userid.value;
+		var pw = frmLogin.passwd.value;
+		
+		if(id=="" || pw==""){		//아이디나 비밀번호가 누락된 경우
+			alert("아이디와 비밀번호는  필수 입력사항입니다.");
+		}else{
+			frmLogin.submit();
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>로그인</h1>
+	<form action="login3" method="post" name="frmLogin">
+		<p>아이디 : <input type="text" name="userid">
+		<p>비밀번호 : <input type="password" name="passwd">
+		<p><input type="hidden" name="phone" value="010-1234-5678">
+		<!-- hidden 타입은 서버쪽에 정보를 숨겨서 전송함 -->
+		<p><input type="button" value="로그인" onclick="fn_validate()">
+	</form>	
+</body>
+</html>

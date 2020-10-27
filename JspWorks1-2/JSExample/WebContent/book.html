@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript 객체</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var book ={
+			title : "JSP 웹 프로그래밍",
+			author : "송미영",
+			pages : 620,
+			price : 27000,
+			info : function(){	//info() 함수 정의
+				alert(this.title + " 책의 가격은 " + this.price + "원입니다.")
+			}
+		}
+		
+		console.log("저자 : " + book.author);
+		console.log("책 분량 : " + book.pages + "쪽");
+		book.info();
+		
+	</script>
+</body>
+</html>

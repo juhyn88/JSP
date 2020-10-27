@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>책 객체 만들기</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//생성자 함수로 객체 만들기
+		function Book(title, author, pages, price){
+			this.title = title,		//콤마로 구분
+			this.author = author,
+			this.pages = pages,
+			this.price = price,
+			this.info = function(){
+				alert(this.title + " 책의 가격은 " + this.price + "원입니다.")
+			}
+		}
+		
+		var jsp = new Book("JSP 웹프로그래밍", "송미영", 620, 27000);
+		
+		//내용 출력
+		document.write("책 제목 : " + jsp.title + "<br>");
+		document.write("저 자 : " + jsp.author + "<br>");
+		document.write("페이지 : " + jsp.pages + "<br>");
+		document.write("가 격 : " + jsp.price + "<br>");
+		jsp.info();
+	
+	</script>
+</body>
+</html>
