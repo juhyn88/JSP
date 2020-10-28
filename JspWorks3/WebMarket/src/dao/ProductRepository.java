@@ -7,7 +7,7 @@ import dto.Product;
 public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
 	
-	public ProductRepository() {		//생성자
+	public ProductRepository() {			//생성자
 		Product phone = new Product("P1234", "iPhone6s", 800000);
 		phone.setDescription("4.7-inch, 1334X750 Retina HD display, 8-megapixel iSight Camera");
 		phone.setCategory("Smart Phone");
