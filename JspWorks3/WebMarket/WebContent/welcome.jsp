@@ -21,12 +21,13 @@
 			<div class="text-center">
 					<h3><%=tagline  %></h3>
 					<%
+						response.setIntHeader("Refresh", 5);	//5초마다 시각이 갱신됨
 						Date day = new Date();
 						String am_pm;
 						int hour = day.getHours();
 						int minute = day.getMinutes();
 						int second = day.getSeconds();
-						if(hour / 12 == 0){		//현재 시각이 12이하이면 'AM' 출력
+						if(hour / 12 == 0){			//현재 시각이 12이하이면 'AM' 출력
 							am_pm = "AM";
 						}else{
 							am_pm = "PM";
