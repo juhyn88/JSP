@@ -7,7 +7,7 @@ import dto.Product;
 public class ProductRepository {
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
 	
-	public ProductRepository() {		//������
+	public ProductRepository() {		//생성자
 		Product phone = new Product("P1234", "iPhone6s", 800000);
 		phone.setDescription("4.7-inch, 1334X750 Retina HD display, 8-megapixel iSight Camera");
 		phone.setCategory("Smart Phone");
@@ -15,7 +15,7 @@ public class ProductRepository {
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
 		
-		Product notebook = new Product("P1235", "LG PC �׷�", 1500000);
+		Product notebook = new Product("P1235", "LG PC ±×·¥", 1500000);
 		notebook.setDescription("13.3-inch, IPS LED display, 5rd Genegation Intel Core processors");
 		notebook.setCategory("Notebook");
 		notebook.setManufacturer("LG");
@@ -34,8 +34,21 @@ public class ProductRepository {
 		listOfProducts.add(tablet);
 	}
 	
-	//��� ��ȸ
+	//목록 조회
 	public ArrayList<Product> getAllProducts(){
 		return listOfProducts;
+	}
+		
+	//특정 상품 상세 정보 조회
+	public Product getProductById(String productId) {
+		Product productById = null;		//개별상품 변수선언
+		
+		for(Product product : listOfProducts) {
+			if(product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
+				productById = product;
+				break;
+			}
+		}
+		return productById;
 	}
 }
