@@ -26,7 +26,7 @@
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %>
 				<p><b>상품 코드 : </b><span class="badge badge-danger">
-												<%=product.getProductId() %></span>
+						<%=product.getProductId() %></span>
 				<p><b>제조사</b> : <%=product.getManufacturer() %>
 				<p><b>분류</b> : <%=product.getCategory() %>
 				<p><b>재고 수</b> : <%=product.getUnitsInStock() %>
