@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import dto.Product;
 
 public class ProductRepository {
+	
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+	private static ProductRepository instance = new ProductRepository();
 	
 	public ProductRepository() {			//생성자
 		Product phone = new Product("P1234", "iPhone6s", 800000);
@@ -32,6 +34,16 @@ public class ProductRepository {
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
 		listOfProducts.add(tablet);
+	}
+	
+	//객체 instance에 대한 get()메서드
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
+	//상품조회
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
 	}
 	
 	//목록 조회
