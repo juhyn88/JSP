@@ -12,8 +12,9 @@
 </head>
 <body>
 	<%
-		MultipartRequest multi = new MultipartRequest(request, "C:\\upload", 5*1024*1024, 
-													"utf-8", new DefaultFileRenamePolicy());
+		String realFolder = "C:\\JspWorks3\\FileUpload\\WebContent\\resources\\upload";
+		DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
+		MultipartRequest multi = new MultipartRequest(request, realFolder, 5*1024*1024, "utf-8", policy);	
 	
 		/*getPrameterNames() 모든 요청 파라미터의 이름과 값을 Enumeration 객체 타입으로 전달받는 메서드*/
 		Enumeration<String> params = multi.getParameterNames();
