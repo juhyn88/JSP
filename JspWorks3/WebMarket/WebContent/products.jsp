@@ -2,6 +2,7 @@
     pageEncoding="UTF-8" import="java.util.Date" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="dto.Product" %>
+<%@ page import="dao.ProductRepository" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +19,7 @@
 		</div>
 	</div>
 	<%
+		ProductRepository dao = ProductRepository.getInstance();
 		ArrayList<Product> listOfProducts = productDAO.getAllProducts();
 	%>
 	<div class="container">
