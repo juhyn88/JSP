@@ -10,7 +10,6 @@
 <title>상품 목록</title>
 <link rel="stylesheet" href="./resources/css/bootstrap.css">
 </head>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 <body>
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
@@ -20,7 +19,7 @@
 	</div>
 	<%
 		ProductRepository dao = ProductRepository.getInstance();
-		ArrayList<Product> listOfProducts = productDAO.getAllProducts();
+		ArrayList<Product> listOfProducts = dao.getAllProducts();
 	%>
 	<div class="container">
 		<div class="row" align="center">
