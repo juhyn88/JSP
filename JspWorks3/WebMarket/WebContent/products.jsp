@@ -27,7 +27,7 @@
 				for(Product product : listOfProducts){
 			%>
 			<div class="col-md-4">
-				<img src="/WebMarket/resources/images/<%=product.getFilename()%>"style="width: 100%">
+				<img src="fileup/<%=product.getFilename()%>"style="width: 100%">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %>
 				<p><%=product.getUnitPrice() %>원
