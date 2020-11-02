@@ -7,7 +7,7 @@
 <title>FileUpload 예제</title>
 </head>
 <body>
-	<form action="fileupload01_process.jsp" method="post" enctype="multipart/form-data">
+	<form action="fileupload01_process2.jsp" method="post" enctype="multipart/form-data">
 		<p>이 름 : <input type="text" name="name">
 		<p>제 목 : <input type="text" name="subject">
 		<p>파일 이름 : <input type="file" name="filename">
