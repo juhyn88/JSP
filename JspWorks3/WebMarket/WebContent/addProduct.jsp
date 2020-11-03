@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
-<script src="./resources/css/validation.js"></script>
+<script type="text/javascript" src="./resources/js/validation.js"></script>
 <title>상품 등록</title>
 </head>
 <body>
@@ -21,19 +21,19 @@
 				<div class="from-group row">					
 					<label class="col-sm-2">상품 코드</label>
 					<div class="col-sm-3">
-						<input type="text" name="productId" class="form-control">
+						<input type="text" id="productId" name="productId" class="form-control">
 					</div>
 				</div>
 				<div class="from-group row">					
 					<label class="col-sm-2">상품명</label>
 					<div class="col-sm-3">
-						<input type="text" name="name" class="form-control">
+						<input type="text" id="name" name="name" class="form-control">
 					</div>
 				</div>
 				<div class="from-group row">					
 					<label class="col-sm-2">가격</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitPrice" class="form-control">
+						<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 					</div>
 				</div>
 				<div class="from-group row">					
@@ -57,7 +57,7 @@
 				<div class="from-group row">					
 					<label class="col-sm-2">재고 수</label>
 					<div class="col-sm-3">
-						<input type="text" name="unitsInStock" class="form-control">
+						<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
 					</div>
 				</div>
 				<div class="from-group row">					
@@ -80,7 +80,7 @@
 				<div class="form-group row">
 					<div class="col-sm-offset-2 col-sm-10">
 						<input type="button" class="btn btn-primary" value="등록" 
-									onclick="checkAddProduct()">
+									onclick="CheckAddProduct()">
 					</div>
 				</div>
 		</form>
