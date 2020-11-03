@@ -77,6 +77,12 @@
 						<input type="file" name="productImage" class="form-control" >
 					</div>
 				</div>
+				<div class="form-group row">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="button" class="btn btn-primary" value="등록" 
+									onclick="checkAddProduct()">
+					</div>
+				</div>
 		</form>
 	</div>
 	<jsp:include page="footer.jsp"/>
