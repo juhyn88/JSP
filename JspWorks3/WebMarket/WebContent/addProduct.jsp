@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
+<script src="./resources/css/validation.js"></script>
 <title>상품 등록</title>
 </head>
 <body>
