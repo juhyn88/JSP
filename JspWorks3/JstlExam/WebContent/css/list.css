@@ -1,0 +1,8 @@
+@charset "UTF-8";
+	.list{width: 80%; padding: 0 10px 10px; margin:0 auto;}
+	.list li{margin: 10px 0; line-height: 100px; list-style: none; 
+				border-bottom: 2px solid #ccc; position:relative;}
+	.list li img{float: left; position:absolute;}
+	.list li a{text-decoratio: none; margin-left: 300px; color: black;}
+	.list li a:hover{text-decoration:underline}
+	.list li span{color: blue; margin-left: 320px; font-size:14px;}
