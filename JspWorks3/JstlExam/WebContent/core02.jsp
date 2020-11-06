@@ -6,11 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>CORE 태그</title>
+<script type="text/javascript">
+function check(){
+	var form = document.form1;
+	var num = form.number.value;
+	var regExNum = /^[0-9]*$/;
+		
+	if(!regExNum.test(num) || num == " "  ){
+			alert("숫자를 입력해 주세요.");
+			form.number.select();
+	}else{
+		form.submit();		//오류가 없다면 전송
+	}
+}
+</script>
 </head>
 <body>
-	<form action="core02_process.jsp" method="get">
+	<form name="form1" action="core02_process.jsp" method="get">
 		<p>숫자 : <input type="text" name="number">
-		<p><input type="submit" value="전송">
+		<p><input type="button" value="전송" onclick=check()>
 	</form>
 </body>
 </html>
