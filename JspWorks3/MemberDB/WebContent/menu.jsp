@@ -28,14 +28,14 @@
 			<li><a href="main.jsp">Home</a>
 			<li><a href="login_form.jsp">로그인</a>
 			<li><a href="mem_form.jsp">회원가입</a>
-			<li><a href="board_list">게시판</a>
+			<li><a href="board_list.jsp">게시판</a>
 		</ul>
 		<%} else { %>
 		<ul>
 			<li><a href="main.jsp">Home</a>
 			<li><a href="logout.jsp">[<%=sessionId %>님]로그아웃</a>
 			<li><a href="mem_list.jsp">회원 목록</a>
-			<li><a href="board_list">게시판</a>
+			<li><a href="board_list.jsp">게시판</a>
 		</ul>
 		<% } %>
 	</nav>
