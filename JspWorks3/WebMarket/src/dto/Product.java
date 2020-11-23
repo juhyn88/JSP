@@ -5,29 +5,28 @@ import java.io.Serializable;
 public class Product implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
-	private String productId;		//»óÇ° ¾ÆÀÌµğ
-	private String pname;				//»óÇ°¸í
-	private Integer unitPrice;		//»óÇ° °¡°İ
-	private String description;		//»óÇ° ¼³¸í
-	private String manufacturer;	//Á¦Á¶»ç
-	private String category;			//ºĞ·ù
-	private long unitsInStock;		//Àç°í ¼ö
-	private String condition;		//½Å»óÇ° or Áß°íÇ° or Àç»ıÇ°
-	private String filename;			//ÀÌ¹ÌÁö ÆÄÀÏ¸í
+	private String productId;   //ìƒí’ˆ ì•„ì´ë””
+	private String pname;		//ìƒí’ˆëª…
+	private Integer unitPrice;  //ìƒí’ˆ ê°€ê²©
+	private String description; //ìƒí’ˆ ì„¤ëª…
+	private String manufacturer; //ì œì¡°ì‚¬
+	private String category;   //ë¶„ë¥˜
+	private long unitsInStock;  //ì¬ê³  ìˆ˜
+	private String condition;  //ì‹ ìƒí’ˆ or ì¤‘ê³ í’ˆ or ì¬ìƒí’ˆ
+	private String filename;   //ì´ë¯¸ì§€ íŒŒì¼ëª…
+	private int quantity;     //ì¥ë°”êµ¬ë‹ˆì— ë‹´ì€ ê°œìˆ˜(ìˆ˜ëŸ‰)
 	
-	public Product() {		//±âº» »ı¼ºÀÚ
+	public Product() { //ê¸°ë³¸ ìƒì„±ì
 		super();
 	}
 
 	public Product(String productId, String pname, Integer unitPrice) {
-		super();
 		this.productId = productId;
 		this.pname = pname;
 		this.unitPrice = unitPrice;
 	}
-	
-	//setter,getter
-	
+
+	//setter, getter
 	public String getProductId() {
 		return productId;
 	}
@@ -80,8 +79,8 @@ public class Product implements Serializable{
 		return unitsInStock;
 	}
 
-	public void setUnitsInStock(long unitsInStock) {
-		this.unitsInStock = unitsInStock;
+	public void setUnitsInStock(long uitsInStock) {
+		this.unitsInStock = uitsInStock;
 	}
 
 	public String getCondition() {
@@ -100,5 +99,11 @@ public class Product implements Serializable{
 		this.filename = filename;
 	}
 
+	public int getQuantity() {
+		return quantity;
+	}
 
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 }
